@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <van-nav-bar>
+      <template #title>
+        <img src="@/assets/logo.png" alt="logo" class="logo" />
+      </template>
+    </van-nav-bar>
+
+    <BannerVue />
+
+    <van-grid>
+      <van-grid-item icon="photo-o" text="文字" />
+      <van-grid-item icon="photo-o" text="文字" />
+      <van-grid-item icon="photo-o" text="文字" />
+      <van-grid-item icon="photo-o" text="文字" />
+    </van-grid>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
-export default defineComponent({
-  name: "Home",
-  components: {
-    HelloWorld,
-  },
-});
+<script lang="ts" setup>
+import BannerVue from "@/components/Banner.vue";
 </script>
+
+<style lang="scss">
+.home {
+  .logo {
+    display: block;
+    width: 186px;
+    height: 56px;
+  }
+}
+</style>
