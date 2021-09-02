@@ -6,7 +6,7 @@
       </template>
     </van-nav-bar>
 
-    <BannerVue />
+    <banner />
 
     <van-grid>
       <van-grid-item icon="photo-o" text="文字" />
@@ -18,7 +18,12 @@
 </template>
 
 <script lang="ts" setup>
-import BannerVue from "@/components/Banner.vue";
+import { onMounted } from "vue";
+import Banner from "@/components/Banner.vue";
+
+onMounted(() => {
+  console.log("Home onMounted");
+});
 </script>
 
 <style lang="scss">

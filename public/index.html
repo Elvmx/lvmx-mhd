@@ -10,10 +10,18 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
 
+    <script src="https://res2.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
     <script src="./lib/amfe-flexible/index.js"></script>
   </head>
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <script>
+
+      window.wx.chooseImage({
+
+      })
+    </script>
   </body>
 </html>
